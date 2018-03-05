@@ -41,12 +41,11 @@ to use a named pipe as audio output.
 #%setup -D -T -a1
 
 %build
-pwd
-ls
 cd snapcast
 make
 
 %install
+cd snapcast
 install -Dm755 server/snapserver %{buildroot}%{_bindir}/snapserver
 #install -Dm644 -g root -o root server/snapserver.1 ${pkgdir}/usr/share/man/man1/snapserver.1
 
