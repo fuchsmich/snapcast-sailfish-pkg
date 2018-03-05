@@ -41,6 +41,9 @@ to use a named pipe as audio output.
 #%setup -D -T -a1
 
 %build
+pwd
+ls
+cd snapcast
 make
 
 %install
