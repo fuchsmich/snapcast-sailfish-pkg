@@ -37,17 +37,17 @@ conjunction with the music player daemon (MPD) or Mopidy, which can be configure
 to use a named pipe as audio output.
 
 %prep
-%setup
+%setup %setup -q -n %{name}-%{version}/snapcast
 #%setup -D -T -a1
 
 %build
-cd snapcast
+#cd snapcast
 make
 
 %install
-pwd
-ls
-cd snapcast
+#pwd
+#ls
+#cd snapcast
 install -Dm755 server/snapserver %{buildroot}%{_bindir}/snapserver
 #install -Dm644 -g root -o root server/snapserver.1 ${pkgdir}/usr/share/man/man1/snapserver.1
 
