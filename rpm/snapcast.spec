@@ -1,12 +1,12 @@
 Name:           snapcast
-Version:        0.12.0
+Version:        0.13.0
 Release:        1
 Summary:        Synchronous multi-room audio player
 License:        GPL
 Group:          Multimedia/Audio Adaptation
 Url:            https://github.com/badaix/snapcast
-Source0:        snapcast-%{version}.tar.gz
-Source1:        externals.tar.gz
+Source0:        %{name}-%{version}.tar.gz
+#Source1:        externals.tar.gz
 Source2:        snapclient.service
 Source3:        snapserver.service
 Source4:        snapserver.default
@@ -38,7 +38,7 @@ to use a named pipe as audio output.
 
 %prep
 %setup
-%setup -D -T -a1
+#%setup -D -T -a1
 
 %build
 make
