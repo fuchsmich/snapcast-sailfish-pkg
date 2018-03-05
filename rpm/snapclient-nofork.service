@@ -1,0 +1,17 @@
+[Unit]
+Description=Snapcast client
+After=network-online.target sound.target
+Requires=network-online.target
+After=avahi-daemon.service
+Requires=avahi-daemon.service
+
+[Service]
+EnvironmentFile=-/etc/default/snapclient
+User=snapclient
+Group=snapclient
+ExecStart=/usr/bin/snapclient $SNAPCLIENT_OPTS
+StandardOutput=null
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

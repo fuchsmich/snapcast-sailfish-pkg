@@ -1,0 +1,12 @@
+[Unit]
+Description=Snapcast server
+
+[Service]
+EnvironmentFile=-/etc/default/snapserver
+EnvironmentFile=-%h/.config/snapserver.conf
+ExecStart=/usr/bin/snapserver $SNAPSERVER_OPTS
+StandardOutput=null
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

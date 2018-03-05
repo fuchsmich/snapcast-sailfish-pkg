@@ -1,0 +1,12 @@
+[Unit]
+Description=Snapcast client
+
+[Service]
+EnvironmentFile=-/etc/default/snapclient
+EnvironmentFile=-%h/.config/snapclient.conf
+ExecStart=/usr/bin/snapclient $SNAPCLIENT_OPTS
+StandardOutput=null
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

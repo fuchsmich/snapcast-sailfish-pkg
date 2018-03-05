@@ -1,0 +1,6 @@
+-------------------------------------------------------------------
+Wed Jan 17 2013 - michfu@gmx.at
+
+- Still fiddling with first build
+  * avahi only runs with root priv (fails to open socket)
+  * snapclient doesnt output sound

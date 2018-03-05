@@ -1,0 +1,17 @@
+[Unit]
+Description=Snapcast server
+After=network-online.target
+Requires=network-online.target
+After=avahi-daemon.service
+Requires=avahi-daemon.service
+
+[Service]
+EnvironmentFile=-/etc/default/snapserver
+User=snapserver
+Group=snapserver
+ExecStart=/usr/bin/snapserver $SNAPSERVER_OPTS
+StandardOutput=null
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
