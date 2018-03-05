@@ -45,6 +45,8 @@ cd snapcast
 make
 
 %install
+pwd
+ls
 cd snapcast
 install -Dm755 server/snapserver %{buildroot}%{_bindir}/snapserver
 #install -Dm644 -g root -o root server/snapserver.1 ${pkgdir}/usr/share/man/man1/snapserver.1
